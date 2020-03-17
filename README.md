@@ -56,3 +56,10 @@ particular filter. Using gradient ascent to maximize this loss generates synthet
 To compare models, it is required to examine how often the model fails to predict the correct answer. If the input images are greater than 128 x 128, its kernel size may choose to use greater than 3 (kernel size>3) because of learn larger spatial filter and to help reduce volume size where the VGG19 exclusively use kernel size (3 x 3). For that the model fails to predict the correct answer.
 As our image of dataset are 64 x 64, for that we choose kernel size<3 which is not good for advance CNN architecture such as inceptionV3, ResNet50 etc. Because they use kernel 1x1, 3x3, 5x5 and so on. And combine the output. Again we choose strides 2x2 because our dataset of image size is small. The final dense layer softmax for a particular category. Gradient ascent is applied until the loss reaches _ 1 which implies that the CNN is 100% confident that the synthetic image is that category
 
+
+#Accuracy
+We have considered Precession, Recall, F1 score and accuracy which is given below:
+Precession:97.96%
+Recall:94.69%
+F1 score:96.36%
+Accuracy:96.78%
